@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+:root {
+    --text-color: #fff;
+    --main-color: #1d9bf0;
+}
+
+html {
+    font-family: 'Cairo', sans-serif, 'Roboto', 'Open Sans';
+}
+
+body {
+    background-color: #000;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.head header {
+    margin-right: 40px;
+}
+
+.head nav {
+    margin-top: 10px;
+    height: 100vh;
+    width: 26%;
+    position: fixed;
+}
+
+.head nav .logo {
+    width: 50px;
+    border-radius: 2px;
+    margin-right: 20px;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+    text-align: center;
+}
+
+.head nav .link {
+    color: var(--text-color);
+    font-size: 22px;
+    margin: 8px 0;
+    width: fit-content;
+}
+
+.head nav .link a {
+    color: var(--text-color);
+    padding: 4px 20px;
+    border-radius: 25px;
+    transition: .5s;
+}
+
+.head nav .link a:hover {
+    background-color: #ffffff25;
+}
+
+.head nav .link.active {
+    background-color: #ffffff25;
+    border-radius: 25px;
+}
+
+.head nav button {
+    margin-top: 20px;
+    text-align: center;
+    border: none;
+    padding: 4px 60px;
+    font-size: 33px;
+    border-radius: 25px;
+    font-weight: bold;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.head nav button:hover {
+    background-color: #008be8
+}
+
+.head nav .my-account {
+    position: absolute;
+    font-size: 12px;
+    bottom: 30px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 30px;
+    font-weight: 200;
+    border-radius: 35px;
+    transition: .5s;
+}
+
+.head nav .my-account:hover {
+    background-color: #ffffff25;
+}
+
+.head nav .my-account img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.head nav .my-account .text {
+    display: grid;
+    color: var(--text-color);
+    margin-right: 9px;
+}
+
+.userName {
+    color: #777;
+    font-weight: 100;
+}
+
+.forYou-flex {
+    margin-top: 10px;
+    width: 70%;
+    height: 100%;
+    margin-right: 30%;
+    z-index: 9;
+}
+
+.allpagefeed {
+    width: 100%;
+    display: flex;
+}
+
+.forYou-flex .mainPage-right {
+    width: 64%;
+    border-right: 1px solid #777;
+    border-left: 1px solid #777;
+}
+
+.mainPage-right .post {
+    margin-bottom: 60px;
+}
+
+.mainPage-right .postYouOrfollowers {
+    width: 100%;
+}
+
+.mainPage-right .postYouOrfollowers h2 {
+    margin: 10px 12px 15px 0;
+}
+
+.mainPage-right .postYouOrfollowers .costonLinks :nth-child(1),
+.mainPage-right .postYouOrfollowers .costonLinks :nth-child(2) {
+    width: 50%;
+    text-align: center;
+    height: 50px;
+    line-height: 3;
+    border-bottom: 1px solid #777;
+}
+
+.mainPage-right .postYouOrfollowers .costonLinks :nth-child(1) {
+    float: right;
+}
+
+.mainPage-right .postYouOrfollowers .costonLinks :nth-child(1).active {
+    position: relative;
+}
+
+.mainPage-right .postYouOrfollowers .costonLinks :nth-child(1).active::after {
+    position: absolute;
+    content: '';
+    width: 30%;
+    height: 2px;
+    background: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+.mainPage-right .postYouOrfollowers .costonLinks :nth-child(2) {
+    float: left;
+}
+
+.mainPage-right .makepost {
+    padding: 10px 12px;
+    margin-top: 20px;
+}
+
+.mainPage-right .makepost .typepost img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.mainPage-right .makepost .typepost input {
+    margin-right: 20px;
+    width: 60%;
+    height: 40px;
+    font-size: 18px;
+    padding: 5px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: .5px solid #77777788;
+}
+
+.tweetNow {
+    color: var(--main-color);
+    margin: 20px 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.tweetNow .icons i {
+    color: var(--main-color);
+    padding: 0 4px;
+    cursor: pointer;
+}
+
+.tweetNow button {
+    background-color: var(--main-color);
+    border: none;
+    outline: none;
+    font-size: 19px;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.tweetslength h3 {
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--main-color);
+    font-size: 15px;
+    font-weight: 400;
+    border-top: .5px solid #77777788;
+    border-bottom: .5px solid #77777788;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.tweetslength h3:hover {
+    background-color: #ffffff23;
+}
+
+.tweetsBoxes .personInfo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.tweetsBoxes .tweetBox {
+    border-bottom: .5px solid #77777788;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.tweetsBoxes .tweetBox .personInfo .imageProfile {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.tweetsBoxes .tweetBox .personInfo .name span {
+    font-size: 12px;
+    color: #777;
+    margin-right: 5px;
+}
+
+.tweetsBoxes .tweetBox .personInfo .moreImfo {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tweetsBoxes .tweetBox .tweetinfo .description {
+    margin: 5px 0 0 5px;
+    text-align: end;
+}
+
+.tweetsBoxes .tweetBox .tweetinfo img {
+    width: 100%;
+}
+
+.tweetsBoxes .tweetBox .tweetinfo .iconsInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .comments i,
+.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .retweet i,
+.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .react i,
+.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .chart i,
+.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .share i {
+    cursor: pointer;
+    transition: .5s;
+}
+
+.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .comments i:hover {
+    color: var(--main-color);
+}
+
+.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .retweet i:hover {
+    color: green;
+}
+
+.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .react i:hover {
+    color: red;
+}
+
+.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .chart i:hover {
+    color: var(--main-color);
+}
+
+.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .share i:hover {
+    color: var(--main-color);
+}
+
+.forYou-flex .mainPage-left {
+    width: 40%;
+    margin: 0 40px 0 100px;
+}
+
+.forYou-flex .mainPage-left .searchbox input {
+    width: 21%;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #7c7c7c;
+    color: #eee;
+    border: none;
+    outline: var(--main-color);
+    padding: 4px 10px;
+    font-size: 19px;
+    position: fixed;
+}
+
+.forYou-flex .mainPage-left .searchbox input::placeholder {
+    color: #eee;
+}
+
+.forYou-flex .mainPage-left .tags {
+    margin-top: 50px;
+    background-color: #ffffff12;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.forYou-flex .mainPage-left .tags h1 {
+    margin-bottom: 10px;
+    color: var(--main-color);
+}
+
+.forYou-flex .mainPage-left .tags .tagLInk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.forYou-flex .mainPage-left .tags .tagLInk .text p {
+    font-size: 14px;
+    color: #777;
+}
+
+.forYou-flex .mainPage-left .tags .tagLInk .text h2 {
+    font-size: 16px;
+    color: #eee;
+}
+
+.forYou-flex .mainPage-left .tags .tagLInk span {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.forYou-flex .mainPage-left .requeste {
+    margin-top: 20px;
+    background-color: #ffffff12;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.forYou-flex .mainPage-left .requeste h1 {
+    margin-bottom: 10px;
+    color: var(--main-color);
+}
+
+.forYou-flex .mainPage-left .requeste .personRequest {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.forYou-flex .mainPage-left .requeste .personRequest .content {
+    display: flex;
+    align-items: center;
+}
+
+.forYou-flex .mainPage-left .requeste .personRequest .content img {
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 4px;
+}
+
+.forYou-flex .mainPage-left .requeste .personRequest .content h2 {
+    font-size: 14px;
+}
+
+.forYou-flex .mainPage-left .requeste .personRequest .content p {
+    font-size: 12px;
+    color: #777;
+}
+
+.forYou-flex .mainPage-left .requeste .personRequest button {
+    background: var(--main-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
