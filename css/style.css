@@ -303,23 +303,23 @@ li {
     transition: .5s;
 }
 
-.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .comments i:hover {
+.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .comments i.active {
     color: var(--main-color);
 }
 
-.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .retweet i:hover {
+.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .retweet i.active {
     color: green;
 }
 
-.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .react i:hover {
+.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .react i.active {
     color: red;
 }
 
-.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .chart i:hover {
+.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .chart i.active {
     color: var(--main-color);
 }
 
-.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .share i:hover {
+.tweetsBoxes .tweetBox .tweetinfo .iconsInfo .share i.active {
     color: var(--main-color);
 }
 
